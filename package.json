@@ -9,6 +9,7 @@
     "watch": "webpack --mode development --watch",
     "start": "cross-env NODE_ENV=development webpack serve --mode development"
   },
+  "browserslist": "> 0.25%, not dead",
   "keywords": [
     "js",
     "webpack"

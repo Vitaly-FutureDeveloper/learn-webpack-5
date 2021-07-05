@@ -28,7 +28,7 @@ const optimisation = () => {
   return config;
 }
 
-const fileName = ext => isDev ? `[name].${ext}` : `[name].[hash]${ext}`;
+const fileName = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 
 const cssLoaders = (extra=null) => {
   const loaders = [{
@@ -81,7 +81,6 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "webpack Lesson",
       template: './index.html',
       minify: {
         collapseWhitespace: isProd,
@@ -139,13 +138,10 @@ module.exports = {
               test: /\.m?js$/,
               exclude: /node_modules/,
               use: {
-                loader: {
-                  loader: 'babel-loader',
-                  options: {
-                    presets: ['@babel/preset-env']
-                  }
-                },
-
+                loader: "babel-loader",
+                options: {
+                  presets: ['@babel/preset-env']
+                }
               }
             }
           ]
