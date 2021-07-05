@@ -1,0 +1,27 @@
+@import 'fonts.css';
+@import '~normalize.css';
+
+.container{
+  padding-top: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Manrope;
+  padding-bottom: 2rem;
+}
+
+h1{
+  text-align: center;
+}
+
+.logo{
+  background-image: url("../assets/Frame72.png");
+  background-size: cover;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.code{
+  color: crimson;
+  border: 1px solid whitesmoke;
+}
